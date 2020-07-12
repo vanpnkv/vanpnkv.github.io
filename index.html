@@ -1,6 +1,44 @@
 <!DOCTYPE html>
+
 <html>
- <video src="Krasyvosygrano_c.mp4" loop preload="auto" controls> 
-  Your browser doesn't support HTML5 video tag.
- </video>
+  <body background="https://i.ytimg.com/vi/SnWsXiWu7IY/maxresdefault.jpg">
+  <link rel="stylesheet" type="text/css"href="index.css">
+    <p>Владислав</p>
+    <progress id="progressBar" max="100" value="1"></progress>
+    <p>Ярослав</p>
+    <progress id="progressBar" max="100" value="15"></progress>
+    <p>Иван</p>
+    <progress id="progressBar" max="100" value="1"></progress>
+    <p></p>
+    <h1 align='right'>До конца осталось:</h1>
+    <style>
+     h1 {
+      font-family: Verdana, Arial, Helvetica, sans-serif; 
+      font-size: 21pt; /* Размер шрифта в пунктах */ 
+     }
+    </style>
+    <h1 align='right' id="days"> </h1>
+    <script>
+      n =  new Date();
+      b = new Date("09-01-2020 00:00:00")
+      diff = b - n 
+      seconds = diff / 1000;
+      minutes = seconds / 60;
+      hours = minutes / 60;
+      days = Math.floor(hours / 24);
+      hours = Math.floor(hours - days*24 + 1)
+      if (hours == 1 || hours == 21) {
+        document.getElementById("days").innerHTML = days + ' дней и  ' + hours + ' час'
+      }
+      else if (hours == 2 || hours == 3 || hours == 4 || hours == 22 || hours == 23 || hours == 24) {
+        document.getElementById("days").innerHTML =  days + ' дней и  ' + hours + ' часa'
+      }
+      else {
+        document.getElementById("days").innerHTML = days + ' дней и  ' + hours + ' часов'
+      }
+      
+    </script> 
+    
+
+  </body>
 </html>
